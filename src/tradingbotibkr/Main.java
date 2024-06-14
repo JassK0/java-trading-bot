@@ -9,10 +9,10 @@ public class Main {
         try {
             Thread.sleep(2000); // Wait for the connection to establish
         } catch (InterruptedException e) {
-            e.printStackTrace();
+
         }
         RSIMonitor rsiMonitor = new RSIMonitor(client, "SPY", 1, 30, 65);
-         rsiMonitor.testBuyOrder();
-        //rsiMonitor.startMonitoring();
+         //rsiMonitor.testBuyOrder(); //for testing
+        rsiMonitor.startMonitoring(); // for actual use
     }
 }
